@@ -1,0 +1,135 @@
+/* ruby -run -e httpd . -p 8000 */
+
+* {
+  box-sizing: border-box; }
+
+html {
+  font-family: Avenir, Roboto, Heveltica, san-serif;
+  background: #E6E5E3; }
+
+body {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0; }
+
+  .navbar {
+    overflow: hidden;
+    background-color: #141414; /*A5A5A5 OR BFBFBF*/
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 800px; 
+}
+
+.navbar a {
+  /* float: left; */
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ .navbar-item:active,.navbar-item:hover {
+  color:#aaa8a1;
+ }
+
+
+img {
+  width: 100%;
+  display: block; }
+
+a {
+  color: black;
+  text-decoration: none; }
+
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 2fr;
+  grid-template-rows: 2fr 1fr 1fr 2fr;
+  max-width: 800px;
+  margin: 5vw; }
+
+.header-link {
+  display: block; }
+
+header, b {
+  grid-row: 2 / 4;
+  padding: 2rem;
+  grid-column: 2 / 4;
+  text-align: center;
+  align-self: center;
+  z-index: 1; }
+
+header {
+  z-index: 2; 
+}
+  .menu{
+    position:fixed;
+    width:3.75rem;
+    height:100%;
+    top:0;
+    margin-left:-2em;
+    z-index:10;
+  }
+
+b {
+  background: white;
+  -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  position: relative; }
+  b:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 100%; }
+  b > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+
+h1, h2 {
+  margin: 0;
+  font-size: 1.4rem;
+  line-height: 2rem; }
+
+h2 {
+  font-size: 1rem; }
+
+@media (max-width: 54em) {
+  h1, h2 {
+    line-height: 1.6rem; }
+  h1 {
+    font-size: 2.5vw; }
+  h2 {
+    font-size: 1.8vw; } }
+
+@media (max-width: 42em) {
+  h1, h2 {
+    line-height: 1.1; }
+  h2 {
+    margin-top: 0.3em; } }
+
+figure {
+  margin: 0; }
+
+figure:nth-of-type(1) {
+  grid-row: 1 / 3;
+  grid-column: 1 / 3;
+  align-self: end; }
+
+figure:nth-of-type(2) {
+  grid-row: 1 / 3;
+  grid-column: 3 / 6;
+  align-self: end; }
+
+figure:nth-of-type(3) {
+  grid-row: 3 / 5;
+  grid-column: 1 / 3; }
+
+figure:nth-of-type(4) {
+  grid-row: 3 / 5;
+  grid-column: 3 / 6; }
